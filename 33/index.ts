@@ -1,11 +1,8 @@
-import { sign } from "crypto";
-
 /*
  * Write a function called maxSubarraySum which accepts
  * an array of integers and a number called n. The function
  * should calculate the maximum sum of n consecutive elements
  * in the array.
- *
  */
 export function maxSubarraySum(arr: number[], elements: number) {
   if (arr.length === 0) {
