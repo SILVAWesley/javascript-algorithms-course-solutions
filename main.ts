@@ -1,6 +1,7 @@
 import { checkSame } from "./27";
 import { checkAnagram } from "./28";
 import { sumZero } from "./30";
+import { countUniqueValues } from "./31";
 
 function testCheckSame() {
   console.log(checkSame([1, 2, 3], [4, 1, 9]));
@@ -25,4 +26,11 @@ function testSumZero() {
   console.log(sumZero([]));
 }
 
-testSumZero();
+function testCountUniqueValues() {
+  console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
+  console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]));
+  console.log(countUniqueValues([]));
+  console.log(countUniqueValues([-2, -1, -1, 0, 1]));
+}
+
+testCountUniqueValues();
