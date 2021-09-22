@@ -1,5 +1,6 @@
 import { checkSame } from "./27";
 import { checkAnagram } from "./28";
+import { sumZero } from "./30";
 
 function testCheckSame() {
   console.log(checkSame([1, 2, 3], [4, 1, 9]));
@@ -17,4 +18,11 @@ function testCheckAnagram() {
   console.log(checkAnagram("texttwisttime", "timetwisttext"));
 }
 
-testCheckAnagram();
+function testSumZero() {
+  console.log(sumZero([-3, -2, -1, 0, 1, 2, 3]));
+  console.log(sumZero([-2, 0, 1, 3]));
+  console.log(sumZero([1, 2, 3]));
+  console.log(sumZero([]));
+}
+
+testSumZero();
