@@ -1,3 +1,5 @@
+import { sign } from "crypto";
+
 /*
  * Write a function called maxSubarraySum which accepts
  * an array of integers and a number called n. The function
@@ -6,26 +8,26 @@
  *
  */
 export function maxSubarraySum(arr: number[], elements: number) {
-  let maxSum = -Infinity;
-
-  let windowStart = 0;
-
   if (arr.length === 0) {
     return null;
   }
 
-  while (windowStart + elements - 1 < arr.length) {
-    let parcialSum = 0;
+  // First sum
+  let sum = 0;
 
-    for (let i = 0; i < elements; i++) {
-      parcialSum += arr[windowStart + i];
+  for (let i = 0; i < elements; i++) {
+    sum += arr[i];
+  }
+
+  let maxSum = sum;
+
+  for (let i = elements; i < arr.length; i++) {
+    sum -= arr[i - elements];
+    sum += arr[i];
+
+    if (sum > maxSum) {
+      maxSum = sum;
     }
-
-    if (parcialSum > maxSum) {
-      maxSum = parcialSum;
-    }
-
-    windowStart += 1;
   }
 
   return maxSum;
