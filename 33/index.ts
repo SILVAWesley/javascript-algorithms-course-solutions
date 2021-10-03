@@ -4,6 +4,9 @@
  * should calculate the maximum sum of n consecutive elements
  * in the array.
  */
+
+// [1, 2, 5, 6, 7, 3, 4], 3
+
 export function maxSubarraySum(arr: number[], elements: number) {
   if (arr.length === 0) {
     return null;

@@ -3,6 +3,7 @@
  * a sorted array, and counts the unique values in the array.
  * There can be negative numbers in the array, but it will
  * always be sorted.
+ * [1, 1, 2, 3, 4, 4]
  */
 export function countUniqueValues(arr: number[]) {
   if (!arr || arr.length === 0) {
