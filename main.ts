@@ -13,6 +13,11 @@ import { isPalindrome } from "./ex9.1";
 import { reverse } from "./ex9.2";
 import { someRecursive } from "./ex9.3";
 import { flatten } from "./ex9.4";
+import { capitalizeFirst } from "./ex9.5";
+import { nestedEvenSum } from "./ex9.6";
+import { capitalizeWords } from "./ex9.7";
+import { stringifyNumbers } from "./ex9.8";
+import { collectStrings } from "./ex9.9";
 
 function testCheckSame() {
   console.log(checkSame([1, 2, 3], [4, 1, 9]));
@@ -113,4 +118,76 @@ function testFlatten() {
   //console.log([1, 2, 3, 4].concat([5, 6]));
 }
 
-testFlatten();
+function testCapitalizeFirst() {
+  console.log(capitalizeFirst(["car", "taco", "banana"]));
+}
+
+function testNestEvenSum() {
+  console.log(nestedEvenSum({ x: 2, y: 3 }));
+
+  console.log(
+    nestedEvenSum({
+      a: 2,
+      b: { b: 2, bb: { b: 3, bb: { b: 2 } } },
+      c: { c: { c: 2 }, cc: "ball", ccc: 5 },
+      d: 1,
+      e: { e: { e: 2 }, ee: "car" },
+    })
+  );
+
+  console.log(
+    nestedEvenSum({
+      outer: 2,
+      obj: {
+        inner: 2,
+        otherObj: {
+          superInner: 2,
+          notANumber: true,
+          alsoNotANumber: "yup",
+        },
+      },
+    })
+  );
+}
+
+function testCapitalizeWords() {
+  console.log(capitalizeWords(["i", "am", "learning", "recursion"]));
+}
+
+function testStringifyNumbers() {
+  console.log(
+    stringifyNumbers({
+      num: 1,
+      test: [],
+      data: {
+        val: 4,
+        info: {
+          isRight: true,
+          random: 66,
+        },
+      },
+    })
+  );
+}
+
+function testCollectStrings() {
+  console.log(
+    collectStrings({
+      stuff: "foo",
+      data: {
+        val: {
+          thing: {
+            info: "bar",
+            moreInfo: {
+              evenMoreInfo: {
+                weMadeIt: "baz",
+              },
+            },
+          },
+        },
+      },
+    })
+  );
+}
+
+testCollectStrings();
