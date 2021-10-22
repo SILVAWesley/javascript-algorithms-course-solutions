@@ -3,6 +3,7 @@ import { checkAnagram } from "./28";
 import { sumZero } from "./30";
 import { countUniqueValues } from "./31";
 import { maxSubarraySum } from "./33";
+import { binarySearch } from "./ex10.2";
 import { minSubArrayLen } from "./ex6.6";
 import { power } from "./ex8.1";
 import { factorial } from "./ex8.2";
@@ -190,4 +191,8 @@ function testCollectStrings() {
   );
 }
 
-testCollectStrings();
+function testBinarySearch() {
+  console.log(binarySearch([4], 95));
+}
+
+testBinarySearch();
