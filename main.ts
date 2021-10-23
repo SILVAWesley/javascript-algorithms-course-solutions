@@ -4,6 +4,11 @@ import { sumZero } from "./30";
 import { countUniqueValues } from "./31";
 import { maxSubarraySum } from "./33";
 import { binarySearch } from "./ex10.2";
+import { naiveStringSearch } from "./ex10.3";
+import { bubbleSort } from "./ex11.1";
+import { selectionSort } from "./ex12.1";
+import { insertionSort } from "./ex13.1";
+import { merge, mergeSort } from "./ex14.1";
 import { minSubArrayLen } from "./ex6.6";
 import { power } from "./ex8.1";
 import { factorial } from "./ex8.2";
@@ -195,4 +200,28 @@ function testBinarySearch() {
   console.log(binarySearch([4], 95));
 }
 
-testBinarySearch();
+function testNaiveStringSearch() {
+  console.log(naiveStringSearch("hellohellohelle", "llo"));
+}
+
+function testBubbleSort() {
+  console.log(bubbleSort([2, 4, 1, 10, 20, 31, 50, 2, 1, 0, 94, 1]));
+}
+
+function testSelectionSort() {
+  console.log(selectionSort([2, 4, 1, 10, 20, 31, 50, 2, 1, 0, 94, 1]));
+}
+
+function testInsertionSort() {
+  console.log(insertionSort([2, 4, 1, 10, 20, 31, 50, 2, 1, 0, 94, 1]));
+}
+
+function testMerge() {
+  console.log(merge([1, 2], [3]));
+}
+
+function testMergeSort() {
+  console.log(mergeSort([19, 20, 1, 3, 9, 0, 40]));
+}
+
+testMergeSort();
