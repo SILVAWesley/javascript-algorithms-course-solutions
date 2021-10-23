@@ -10,6 +10,7 @@ import { selectionSort } from "./ex12.1";
 import { insertionSort } from "./ex13.1";
 import { merge, mergeSort } from "./ex14.1";
 import { pivotHelper, quickSort } from "./ex15.1";
+import { digitCount, getDigit, mostDigits, radixSort } from "./ex16.1";
 import { minSubArrayLen } from "./ex6.6";
 import { power } from "./ex8.1";
 import { factorial } from "./ex8.2";
@@ -229,4 +230,8 @@ function testQuickSort() {
   console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]));
 }
 
-testQuickSort();
+function testRadixSort() {
+  console.log(radixSort([444, 22, 111, 444]));
+}
+
+testRadixSort();
