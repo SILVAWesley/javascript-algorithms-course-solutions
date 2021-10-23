@@ -9,6 +9,7 @@ import { bubbleSort } from "./ex11.1";
 import { selectionSort } from "./ex12.1";
 import { insertionSort } from "./ex13.1";
 import { merge, mergeSort } from "./ex14.1";
+import { pivotHelper, quickSort } from "./ex15.1";
 import { minSubArrayLen } from "./ex6.6";
 import { power } from "./ex8.1";
 import { factorial } from "./ex8.2";
@@ -224,4 +225,8 @@ function testMergeSort() {
   console.log(mergeSort([19, 20, 1, 3, 9, 0, 40]));
 }
 
-testMergeSort();
+function testQuickSort() {
+  console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]));
+}
+
+testQuickSort();
